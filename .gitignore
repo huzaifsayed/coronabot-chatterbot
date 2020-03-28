@@ -16,6 +16,7 @@ _mailinglist
 .idea/
 docs/_build/
 .vscode
+db.sqlite3
 
 # Coverage reports
 htmlcov/
