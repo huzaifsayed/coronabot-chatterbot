@@ -1,3 +1,5 @@
+from chatterbot.trainers import ChatterBotCorpusTrainer
+from chatterbot.trainers import ListTrainer
 from chatterbot import ChatBot
 
 chatbot = ChatBot(
@@ -16,20 +18,19 @@ chatbot = ChatBot(
     database_uri='sqlite:///database.sqlite3'
 )
 
-# Training With Own Questions 
-from chatterbot.trainers import ListTrainer
+# Training With Own Questions
 
 trainer = ListTrainer(chatbot)
 
 training_data_quesans = open('training_data/ques_ans.txt').read().splitlines()
-training_data_personal = open('training_data/personal_ques.txt').read().splitlines()
+training_data_personal = open(
+    'training_data/personal_ques.txt').read().splitlines()
 
 training_data = training_data_quesans + training_data_personal
 
 trainer.train(training_data)
 
 # Training With Corpus
-from chatterbot.trainers import ChatterBotCorpusTrainer
 
 trainer_corpus = ChatterBotCorpusTrainer(chatbot)
 
