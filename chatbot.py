@@ -11,7 +11,8 @@ chatbot = ChatBot(
         'chatterbot.logic.BestMatch',
         {
             'import_path': 'chatterbot.logic.BestMatch',
-            'default_response': 'I am sorry, but I do not understand. I am still learning.',
+            'default_response': 'I am sorry, but I do not understand.\
+I am still learning.',
             'maximum_similarity_threshold': 0.90
         }
     ],
