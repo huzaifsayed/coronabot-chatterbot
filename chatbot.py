@@ -19,7 +19,6 @@ chatbot = ChatBot(
 )
 
 # Training With Own Questions
-
 trainer = ListTrainer(chatbot)
 
 training_data_quesans = open('training_data/ques_ans.txt').read().splitlines()
